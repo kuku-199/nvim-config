@@ -1,7 +1,3 @@
-return 
-{
-            "akinsho/bufferline.nvim", -- buffer分割线
-          config = functions()
 vim.opt.termguicolors = true
 
 require("bufferline").setup {
@@ -16,6 +12,4 @@ require("bufferline").setup {
             text_align = "left"
         }}
     }
-}
-     end,
 }
