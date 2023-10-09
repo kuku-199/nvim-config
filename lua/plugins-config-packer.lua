@@ -17,18 +17,32 @@ local packer_bootstrap = ensure_packer()
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+    autocmd BufWritePost plugins-config.lua source <afile> | PackerSync
   augroup end
 ]])
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  -- My plugins here
-  -- use 'foo1/bar1.nvim'
-  -- use 'foo2/bar2.nvim'
+  
+  use 'folke/tokyonight.nvim' -- theme
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true } -- status bar
+}
+
+
+  use {
+  'nvim-tree/nvim-tree.lua', -- tree
+  requires = {
+    'nvim-tree/nvim-web-devicons', -- optional
+  },
+}
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+require("nvim-tree").setup()
+
+
   if packer_bootstrap then
     require('packer').sync()
   end

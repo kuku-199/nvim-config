@@ -29,7 +29,7 @@ opt.smartcase = true
 -- aspect 
 opt.termguicolors = true
 opt.signcolumn = "yes"
-
+vim.cmd[[colorscheme tokyonight]]
 
 
 

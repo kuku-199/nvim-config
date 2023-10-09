@@ -12,3 +12,11 @@ keymap.set("v","K",":m '<-2<CR>gv=gv")
 -- window
 keymap.set("n","<leader>sv","<C-w>v") -- vertical new window
 keymap.set("n","<leader>sh","<C-w>s") -- horizontal new window
+
+
+
+
+-- nvim-tree
+keymap.set("n","<leader>t",":NvimTreeToggle<CR>")
+
+
