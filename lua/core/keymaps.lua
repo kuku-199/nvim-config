@@ -17,6 +17,6 @@ keymap.set("n","<leader>sh","<C-w>s") -- horizontal new window
 
 
 -- nvim-tree
-keymap.set("n","<leader>t",":NvimTreeToggle<CR>")
+keymap.set("n","<leader>e",":NvimTreeToggle<CR>")
 
 

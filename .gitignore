@@ -12,5 +12,5 @@
 pkg/
 src/
 
-*.json
+*.json*
 
